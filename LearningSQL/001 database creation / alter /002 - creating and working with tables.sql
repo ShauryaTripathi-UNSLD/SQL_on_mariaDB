@@ -1,0 +1,2 @@
+-- learnt primary KEY
+-- there are two ways to create a table, first graphically and another using QUERY
