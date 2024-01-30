@@ -18,3 +18,6 @@ DROP DATABASE IF EXISTS db_0001;
 --mysqladmin -u root -p reload
 --or
 alter DATABASE db_0001 set SINGLE_USER WITH ROLLBACK immediate;
+
+
+--learn about entity relationship diagram and relational databases;(IMP)
