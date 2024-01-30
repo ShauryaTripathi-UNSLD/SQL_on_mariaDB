@@ -1,0 +1,19 @@
+reader does this, parent program does this
+
+char buff;
+    while (1)
+    {
+        if (read(channel2[0], &buff, 1) > 0)
+        {
+            buff--;
+            if (buff != EOF)
+                putchar(buff);
+            else
+            {
+                kill(child1, 0);
+                kill(child2, 0);
+                puts("child processes are terminated successfully, terminating main.......exiting successfully......");
+                exit(0);
+            }
+        }
+    }
