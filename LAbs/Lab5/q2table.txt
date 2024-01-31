@@ -1,0 +1,56 @@
+ 
+CREATE TABLE SALES_PEOPLE (
+  S_NUM int,
+  S_NAME varchar(255),
+  CITY varchar(255),
+  COMM decimal(5, 2)
+);
+
+INSERT INTO SALES_PEOPLE (S_NUM, S_NAME, CITY, COMM)
+VALUES
+(1001, 'Jessica', 'London', 0.12),
+(1002, 'Robert', 'SanJose', 0.13),
+(1003, 'Alex', 'London', 0.11),
+(1004, 'Mathew', 'Barcelona', 0.15),
+(1007, 'Rihana', 'New York', 0.10);
+
+
+CREATE TABLE CUSTOMERS (
+  C_NUM int,
+  C_NAME varchar(255),
+  CITY varchar(255),
+  RATING int,
+  S_NUM int
+);
+
+INSERT INTO CUSTOMERS (C_NUM, C_NAME, CITY, RATING, S_NUM)
+VALUES
+(2001, 'Hoffman', 'London', 100, 1001),
+(2002, 'Tiffiany', 'Rome', 200, 1003),
+(2003, 'Liu', 'SanJose', 200, 1002),
+(2004, 'Thomas', 'Berlin', 300, 1002),
+(2006, 'Clara', 'London', 100, 1001),
+(2008, 'Ariana', 'SanJose', 300, 1007),
+(2007, 'Duke', 'Rome', 100, 1004);
+
+
+CREATE TABLE ORDERS (
+  O_NUM int,
+  AMT decimal(10, 2),
+  ORDER_DATE date,
+  C_NUM int,
+  S_NUM int
+);
+
+INSERT INTO ORDERS (O_NUM, AMT, ORDER_DATE, C_NUM, S_NUM)
+VALUES
+(3001, 1860, '2024-01-03', 2008, 1007),
+(3003, 7670, '2022-07-03', 2001, 1001),
+(3002, 0, '2024-01-03', 2007, 1004),
+(3005, 5160, '2023-10-03', 2003, 1007),
+(3006, 1095, '2023-10-03', 2008, 1007),
+(3009, NULL, '2024-01-04', 2002, 1007),
+(3007, 5570, '2024-01-04', 2004, 1007),
+(3008, 4723, '2023-10-05', 2006, 1007),
+(3010, NULL, '2022-07-06', 2004, 1007),
+(3011, 1095, '2022-07-03', 2006, 1007);
